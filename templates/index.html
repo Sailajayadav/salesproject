@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Upload</title>
+</head>
+<body>
+    <h1>Upload CSV File</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv">
+        <input type="submit" value="Upload">
+    </form>
+
+    {% if table %}
+        <h2>Uploaded Data:</h2>
+        {{ table | safe }}  <!-- Display the table HTML -->
+    {% endif %}
+</body>
+</html>
